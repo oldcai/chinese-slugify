@@ -1,6 +1,6 @@
 #coding:utf-8
 import unittest
-from chinese_slugify.chinese_slugify import chinese_slugify
+from chinese_slugify import chinese_slugify
 
 
 class ChineseSlugifyTestCase(unittest.TestCase):
