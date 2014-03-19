@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 version = '0.1.0'
 
 name = 'chinese-slugify'
-packages = find_packages('chinese_slugify', exclude=[
+packages = find_packages(exclude=[
     'ez_setup', '*.tests', '*.tests.*', 'tests.*', 'tests'
 ])
 
@@ -39,7 +39,7 @@ setup(
     author=author,
     author_email=author_email,
     packages=packages,
-    py_modules=['chinese_slugify/chinese_slugify'],
+    zip_safe = False,
     install_requires=install_requires,
     test_suite=test_suite,
     #tests_require='docutils >= 0.6',
