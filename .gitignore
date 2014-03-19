@@ -1,0 +1,25 @@
+# python tmp files
+*.py[cdo]
+.coverage
+htmlcov/
+*.egg-info/
+dist/
+build/
+
+# pycharm configs
+/.idea/*
+
+# for setup virtualenv
+.rvmrc
+
+# vim files
+.*.un~
+.*.swp
+*.ropeproject
+
+# log files
+/logs/*
+
+# marks
+.local
+.production
