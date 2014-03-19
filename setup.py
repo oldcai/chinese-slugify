@@ -9,7 +9,7 @@ packages = find_packages(exclude=[
     'ez_setup', '*.tests', '*.tests.*', 'tests.*', 'tests'
 ])
 
-description = 'chinese slugify'
+description = 'A more powerful slugify module for Chinese'
 
 url = 'https://github.com/oldcai/chinese-slugify'
 
