@@ -2,7 +2,7 @@
 from setuptools import setup, find_packages
 
 
-version = '0.1.0'
+version = '0.1.1'
 
 name = 'chinese-slugify'
 packages = find_packages(exclude=[
@@ -21,10 +21,7 @@ classifiers = [
     'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
     'Programming Language :: Python',
     'Programming Language :: Python :: 2',
-    'Programming Language :: Python :: 2.6',
-    'Programming Language :: Python :: 2.7',
     'Programming Language :: Python :: 3',
-    'Programming Language :: Python :: 3.3',
 ]
 
 test_suite = 'chinese_slugify.tests.suite'
@@ -44,5 +41,5 @@ setup(
     test_suite=test_suite,
     #tests_require='docutils >= 0.6',
     classifiers=classifiers,
-    keywords='slugify, chinese',
+    keywords=['slugify', 'chinese'],
 )
