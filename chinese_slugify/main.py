@@ -4,12 +4,15 @@ import unicodedata
 import jieba
 from slugify import slugify
 import pypinyin
+import sys
 
 re_en = re.compile(r'([a-zA-Z\']+)')
 re_all_en = re.compile(r'^([a-zA-Z\']+)$')
-re_chinese = re.compile(ur'([\u2e80-\u9fff]+)')
-re_all_chinese = re.compile(ur'^([\u2e80-\u9fff]+)$')
+re_chinese = re.compile(r'(['+u'\u2e80-\u9fff'+r']+)')
+re_all_chinese = re.compile(r'^(['+u'\u2e80-\u9fff'+r']+)$')
 
+if sys.version_info[0] >= 3:
+    unicode = str
 
 def chinese_slugify(text, delimiter=u"-"):
     if not type(text) == unicode:
@@ -38,7 +41,7 @@ def chinese_slugify(text, delimiter=u"-"):
             slug_list.append(slugify(segment))
     slugged = delimiter.join(slug_list)
     slugged = unicode(
-        unicodedata.normalize('NFKD', slugged).encode('ascii', 'ignore')
+        unicodedata.normalize('NFKD', slugged).encode('ascii', 'ignore').decode()
     )
     slugged = re.sub(
         r"[^\w\s%s']" % re.escape(delimiter),
