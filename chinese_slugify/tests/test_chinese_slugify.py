@@ -5,7 +5,7 @@ from chinese_slugify import chinese_slugify
 
 class ChineseSlugifyTestCase(unittest.TestCase):
     def test_polyphone_word(self):
-        self.assertEquals(chinese_slugify(u'还是还钱吧'), 'HaiShi-Huan-Qian-Ba')
+        self.assertEquals(chinese_slugify(u'还是还钱吧'), 'HaiShi-Hai-Qian-Ba')
 
     def test_russian(self):
         self.assertEquals(chinese_slugify(u'Компьютер'), 'Kompiuter')
